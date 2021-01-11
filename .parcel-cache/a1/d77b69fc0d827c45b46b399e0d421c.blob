@@ -1,0 +1,25 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = exports.selectCounter = exports.setCounter = void 0;
+var _toolkit = require("@reduxjs/toolkit");
+var counterSlice = (0, _toolkit.createSlice)({
+  name: "counter",
+  initialState: {
+    value: 0
+  },
+  reducers: {
+    setCounter: function setCounter(state, action) {
+      state.value++;
+    }
+  }
+});
+var setCounter = counterSlice.actions.setCounter;
+exports.setCounter = setCounter;
+var selectCounter = function selectCounter(state) {
+  return state.value;
+};
+exports.selectCounter = selectCounter;
+var _default = counterSlice.reducer;
+exports["default"] = _default;

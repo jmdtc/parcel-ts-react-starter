@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>My First Parcel App</title>
+    <link rel="stylesheet" href="/index.HASH_REF_c45c60ab1f38984965320ece951def2f.css"><script defer="" src="/index.HASH_REF_740cb68a7dfa047e8562e5934fb1d927.js"></script>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+    </div>
+  </body>
+</html>

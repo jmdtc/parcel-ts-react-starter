@@ -1,0 +1,57 @@
+"use strict";
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.ReduxCounter = void 0;
+  var _react = _interopRequireDefault(require("react"));
+  var _reactRedux = require("react-redux");
+  var _counter = require("../slices/counter");
+  var _s = $RefreshSig$();
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+      "default": obj
+    };
+  }
+  var ReduxCounter = function ReduxCounter() {
+    _s();
+    var dispatch = (0, _reactRedux.useDispatch)();
+    var counter = (0, _reactRedux.useSelector)(_counter.selectCounter);
+    return (
+      /*#__PURE__*/_react["default"].createElement("div", {
+        className: "flex flex-col items-center w-14"
+      }, /*#__PURE__*/_react["default"].createElement("div", {
+        className: "flex flex-row justify-center h-8 w-full border border-gray-400"
+      }, /*#__PURE__*/_react["default"].createElement("span", {
+        className: "leading-loose align-bottom"
+      }, counter)), /*#__PURE__*/_react["default"].createElement("div", {
+        className: "flex flex-row justify-between w-full"
+      }, /*#__PURE__*/_react["default"].createElement("button", {
+        onClick: function onClick() {
+          return dispatch((0, _counter.setCounter)());
+        },
+        className: "w-1/2 border border-gray-400"
+      }, "+"), /*#__PURE__*/_react["default"].createElement("button", {
+        onClick: function onClick() {
+          return dispatch((0, _counter.setCounter)());
+        },
+        className: "w-1/2 border border-gray-400"
+      }, "-")))
+    );
+  };
+  exports.ReduxCounter = ReduxCounter;
+  _s(ReduxCounter, "gthwM6sqboLtlTmr2wLRFX51eJQ=", false, function () {
+      return [_reactRedux.useDispatch, _reactRedux.useSelector];
+    });
+  _c = ReduxCounter;
+  var _c;
+  $RefreshReg$(_c, "ReduxCounter");
+  helpers.postlude(module);
+} finally {
+    window.$RefreshReg$ = prevRefreshReg;
+    window.$RefreshSig$ = prevRefreshSig;
+  }
